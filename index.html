@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mes Projets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .project {
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .project h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        .project p {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        a:hover {
+            background: #764ba2;
+        }
+        .print-btn {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .print-btn button {
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-weight: 600;
+        }
+        .print-btn button:hover {
+            background: #764ba2;
+        }
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .print-btn {
+                display: none;
+            }
+            a {
+                color: #667eea;
+                text-decoration: underline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Portfolio</h1>
+        <p class="subtitle">Mes Projets Principaux</p>
+        
+        <div class="projects">
+            <div class="project">
+                <h2>1️⃣ SMB</h2>
+                <p>Projet innovant et performant développé avec les dernières technologies.</p>
+                <div class="links">
+                    <a href="https://github.com/agencybenweb/SMB" target="_blank">🔗 Voir sur GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project">
+                <h2>2️⃣ Novantys</h2>
+                <p>Une plateforme web moderne et interactive avec une excellente expérience utilisateur.</p>
+                <div class="links">
+                    <a href="https://github.com/agencybenweb/Novantys" target="_blank">🔗 Voir sur GitHub</a>
+                    <a href="https://novantys-psi.vercel.app" target="_blank">🌐 Visiter le site</a>
+                </div>
+            </div>
+            
+            <div class="project">
+                <h2>3️⃣ Ribeira do Porto</h2>
+                <p>Un projet captivant mettant en avant l'excellence et la qualité du développement.</p>
+                <div class="links">
+                    <a href="https://github.com/agencybenweb/RibeiraDoPorto" target="_blank">🔗 Voir sur GitHub</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="print-btn">
+            <button onclick="window.print()">📥 Télécharger en PDF</button>
+        </div>
+    </div>
+</body>
+</html>
